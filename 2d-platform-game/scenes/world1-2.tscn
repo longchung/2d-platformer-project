@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cj0oq52371yid"]
+
+[ext_resource type="PackedScene" uid="uid://b41b4cbhpcj7g" path="res://scenes/mario.tscn" id="1_0ikpa"]
+
+[node name="world1-2" type="Node2D"]
+
+[node name="Mario" parent="." instance=ExtResource("1_0ikpa")]

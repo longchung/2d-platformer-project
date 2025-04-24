@@ -9,5 +9,6 @@ jobs to do:
 - add scoreboard
 
 test version:
--only world 1-1 is running so choose that to run. this world use test sprite so may look janky
+- only world 1-1 is running so choose that to run.
+- this world use test sprite so may look janky
 

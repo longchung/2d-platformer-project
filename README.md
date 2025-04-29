@@ -3,10 +3,11 @@ this is a 2d platformer mario game but focused on pseedrunning
 
 jobs to do:
 - CREATE OWN SPRITE SHEET FOR ANIMATION AND GAME SPRITE
-- add obstacles
-- add goal flags
-- add start and trasition page
-- add scoreboard
+- add ice block
+- add goal flags 
+- add start, trasition and final page
+- add enemies
+
 
 test version:
 - only world 1-1 is running so choose that to run.

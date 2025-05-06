@@ -3,6 +3,7 @@ this is a 2d platformer mario game but focused on pseedrunning
 
 jobs to do:
 - CREATE OWN SPRITE SHEET FOR ANIMATION AND GAME SPRITE
+- add enemy with different state
 - add enemies
 
 

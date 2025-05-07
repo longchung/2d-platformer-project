@@ -11,3 +11,5 @@ test version:
 - to run choose Main_alpha as root scence.
 - this world use test sprite so may look janky
 
+12 pattern + 2 godot thing ( audio and animation )
+

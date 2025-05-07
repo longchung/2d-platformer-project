@@ -1,4 +1,4 @@
-# 2d-platformer-project
+# 2d-platformer-project ALpha
 this is a 2d platformer mario game but focused on pseedrunning
 
 jobs to do:
@@ -8,6 +8,6 @@ jobs to do:
 
 
 test version:
-- only world 1-1 is running so choose that to run.
+- to run choose Main_alpha as root scence.
 - this world use test sprite so may look janky
 

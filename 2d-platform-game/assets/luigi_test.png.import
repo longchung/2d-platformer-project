@@ -2,16 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ee4ll06d72ww"
-path="res://.godot/imported/test_luigi.png-5881f1218f3e2c72c1fb2ca84ef533c4.ctex"
-metadata={
-"vram_texture": false
-}
+uid="uid://bjql5tvkrok56"
+valid=false
 
 [deps]
 
-source_file="res://assets/mob/test_luigi.png"
-dest_files=["res://.godot/imported/test_luigi.png-5881f1218f3e2c72c1fb2ca84ef533c4.ctex"]
+source_file="res://assets/luigi_test.png"
 
 [params]
 

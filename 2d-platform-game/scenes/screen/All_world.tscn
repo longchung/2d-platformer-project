@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ds524yr5y8f2q"]
 
-[ext_resource type="Script" uid="uid://dh2w0um7k7t5u" path="res://scripts/all_world.gd" id="1_qgs48"]
+[ext_resource type="Script" uid="uid://dh2w0um7k7t5u" path="res://scripts/global_helper/all_world.gd" id="1_qgs48"]
 [ext_resource type="FontFile" uid="uid://d1wmclyqmtk6r" path="res://assets/theme/PixelOperator8.ttf" id="2_fbmv7"]
 [ext_resource type="Texture2D" uid="uid://budxlu6km21gs" path="res://assets/symbol/text coin.jpg" id="3_6x0i2"]
 [ext_resource type="Texture2D" uid="uid://bgapeuhxjvtcr" path="res://assets/symbol/test_clock.jpg" id="4_qu4r7"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ee4ll06d72ww"
-path="res://.godot/imported/test_luigi.png-5881f1218f3e2c72c1fb2ca84ef533c4.ctex"
+uid="uid://cxec7laequu8w"
+path="res://.godot/imported/test_newspike.png-a92d977b7f6bde74298470711ac6c032.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mob/test_luigi.png"
-dest_files=["res://.godot/imported/test_luigi.png-5881f1218f3e2c72c1fb2ca84ef533c4.ctex"]
+source_file="res://assets/hazard/test_newspike.png"
+dest_files=["res://.godot/imported/test_newspike.png-a92d977b7f6bde74298470711ac6c032.ctex"]
 
 [params]
 

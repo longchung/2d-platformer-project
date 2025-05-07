@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ee4ll06d72ww"
-path="res://.godot/imported/test_luigi.png-5881f1218f3e2c72c1fb2ca84ef533c4.ctex"
+uid="uid://bptj2mum4t0by"
+path="res://.godot/imported/test_spawner.png-85ac5ef43d667ca0c711e313a3ef3340.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mob/test_luigi.png"
-dest_files=["res://.godot/imported/test_luigi.png-5881f1218f3e2c72c1fb2ca84ef533c4.ctex"]
+source_file="res://assets/mob/test_spawner.png"
+dest_files=["res://.godot/imported/test_spawner.png-85ac5ef43d667ca0c711e313a3ef3340.ctex"]
 
 [params]
 

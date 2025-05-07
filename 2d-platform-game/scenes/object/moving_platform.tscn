@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bfvn4o73pkffl"]
 
-[ext_resource type="Script" uid="uid://262ne138xrg3" path="res://scripts/moving_platform.gd" id="1_1tdcd"]
-[ext_resource type="Texture2D" uid="uid://bfxcx4poqn6l7" path="res://assets/platform_move.png" id="2_1tdcd"]
+[ext_resource type="Script" uid="uid://262ne138xrg3" path="res://scripts/object/moving_platform.gd" id="1_1tdcd"]
+[ext_resource type="Texture2D" uid="uid://bfxcx4poqn6l7" path="res://assets/hazard/platform_move.png" id="2_1tdcd"]
 
 [sub_resource type="Curve2D" id="Curve2D_1tdcd"]
 resource_local_to_scene = true

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dw7ya7sdx4evj"]
 
-[ext_resource type="Script" uid="uid://ch2t8y2sa5gir" path="res://scripts/spike.gd" id="1_7a7y0"]
-[ext_resource type="Texture2D" uid="uid://cxec7laequu8w" path="res://assets/test_newspike.png" id="2_7a7y0"]
+[ext_resource type="Script" uid="uid://ch2t8y2sa5gir" path="res://scripts/object/spike.gd" id="1_7a7y0"]
+[ext_resource type="Texture2D" uid="uid://cxec7laequu8w" path="res://assets/hazard/test_newspike.png" id="2_7a7y0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ljd5v"]
 size = Vector2(32, 16)

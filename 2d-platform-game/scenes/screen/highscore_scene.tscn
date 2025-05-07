@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://dwa6p1oymk4qf" path="res://assets/theme/default_theme.tres" id="1_3xfig"]
 [ext_resource type="FontFile" uid="uid://0mpskit32svm" path="res://assets/theme/PixelOperator8-Bold.ttf" id="1_o8fis"]
-[ext_resource type="Script" uid="uid://2eixsyobevpp" path="res://scripts/highscore_scene.gd" id="2_6kl8u"]
+[ext_resource type="Script" uid="uid://2eixsyobevpp" path="res://scripts/scene/highscore_scene.gd" id="2_6kl8u"]
 
 [node name="highscore_scene" type="Control"]
 layout_mode = 3

@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxhn5h3ogg0di"]
+
+[ext_resource type="Script" uid="uid://cwcgsdxxyjvab" path="res://scripts/player/playable_character.gd" id="1_voq27"]
+[ext_resource type="Texture2D" uid="uid://ee4ll06d72ww" path="res://assets/mob/test_luigi.png" id="2_voq27"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5gbmu"]
+size = Vector2(32, 32)
+
+[node name="luigi" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_voq27")
+double_jump = true
+metadata/_custom_type_script = "uid://cwcgsdxxyjvab"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.76837e-07, -16)
+scale = Vector2(0.0359551, 0.0269587)
+texture = ExtResource("2_voq27")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_5gbmu")
+
+[node name="checkice2" type="RayCast2D" parent="."]
+target_position = Vector2(32, 48)
+collision_mask = 2
+
+[node name="checkice" type="RayCast2D" parent="."]
+collision_mask = 2
+
+[node name="checkice3" type="RayCast2D" parent="."]
+target_position = Vector2(-32, 48)
+collision_mask = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.6, 1.6)

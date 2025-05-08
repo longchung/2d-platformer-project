@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="2d platform game"
-run/main_scene="uid://da2ow8qhjodo"
+run/main_scene="uid://bm3eyounmflyf"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-AllWorld="*res://scenes/All_world.tscn"
+AllWorld="*res://scenes/screen/All_world.tscn"
+GlobalPlayerManager="*res://scripts/global_helper/global_player_manager.gd"
 
 [dotnet]
 

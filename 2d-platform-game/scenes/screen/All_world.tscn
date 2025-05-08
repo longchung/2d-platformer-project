@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://ds524yr5y8f2q"]
+
+[ext_resource type="Script" uid="uid://dh2w0um7k7t5u" path="res://scripts/global_helper/all_world.gd" id="1_qgs48"]
+[ext_resource type="FontFile" uid="uid://d1wmclyqmtk6r" path="res://assets/theme/PixelOperator8.ttf" id="2_fbmv7"]
+[ext_resource type="Texture2D" uid="uid://budxlu6km21gs" path="res://assets/symbol/text coin.jpg" id="3_6x0i2"]
+[ext_resource type="Texture2D" uid="uid://bgapeuhxjvtcr" path="res://assets/symbol/test_clock.jpg" id="4_qu4r7"]
+[ext_resource type="Texture2D" uid="uid://76eabwe6dgy" path="res://assets/symbol/score_test.png" id="5_3lp5k"]
+
+[node name="All_world" type="Node"]
+script = ExtResource("1_qgs48")
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="coin" type="Label" parent="GUI"]
+offset_left = 80.0
+offset_top = 56.0
+offset_right = 120.0
+offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("2_fbmv7")
+theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="total_score" type="Label" parent="GUI"]
+offset_left = 80.0
+offset_top = 104.0
+offset_right = 120.0
+offset_bottom = 192.0
+theme_override_fonts/font = ExtResource("2_fbmv7")
+theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="time" type="Label" parent="GUI"]
+offset_left = 80.0
+offset_top = 8.0
+offset_right = 120.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("2_fbmv7")
+theme_override_font_sizes/font_size = 40
+
+[node name="coin_sprite" type="Sprite2D" parent="GUI"]
+position = Vector2(48, 72)
+scale = Vector2(0.0489131, 0.0681819)
+texture = ExtResource("3_6x0i2")
+
+[node name="clock_sprite" type="Sprite2D" parent="GUI"]
+position = Vector2(47, 23)
+scale = Vector2(0.0283334, 0.0283333)
+texture = ExtResource("4_qu4r7")
+
+[node name="score" type="Sprite2D" parent="GUI"]
+position = Vector2(48, 120)
+scale = Vector2(0.0115117, 0.0266141)
+texture = ExtResource("5_3lp5k")

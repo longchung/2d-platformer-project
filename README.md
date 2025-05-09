@@ -1,4 +1,4 @@
-# 2d-platformer-project alpha v1.2
+# 2d-platformer-project alpha v1.3 ( added 2 shader)
 this is a 2d platformer mario game but focused on pseedrunning
 
 jobs to do:
@@ -6,6 +6,7 @@ jobs to do:
 - add enemy with different state using enemy spawner
 - add timer
 - add sound and more animation
+- add either multiion to level, or facade for pause menu and other control 
 
 
 test version:

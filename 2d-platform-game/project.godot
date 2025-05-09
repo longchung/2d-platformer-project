@@ -27,6 +27,7 @@ project/assembly_name="2d platform game"
 [global_group]
 
 player="the player"
+obstacle=""
 
 [input]
 

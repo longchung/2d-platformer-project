@@ -1,24 +1,74 @@
-[gd_scene load_steps=4 format=3 uid="uid://8pip7ndxai7d"]
+[gd_scene load_steps=10 format=3 uid="uid://8pip7ndxai7d"]
 
 [ext_resource type="Script" uid="uid://cwcgsdxxyjvab" path="res://scripts/player/playable_character.gd" id="1_oxdto"]
+[ext_resource type="Shader" uid="uid://h2bi8xstmqu4" path="res://shader/hurt.gdshader" id="2_mtv85"]
 [ext_resource type="Texture2D" uid="uid://bf1a6c5tgmdq2" path="res://assets/mob/test_mario.webp" id="2_otdgh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ymw4l"]
+shader = ExtResource("2_mtv85")
+shader_parameter/flash_color = Color(0.827451, 0, 0.184314, 0.0431373)
+shader_parameter/flash_value = 0.3
+
+[sub_resource type="Animation" id="Animation_yfcli"]
+resource_name = "flash_hurt"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/flash_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.3, 0.7, 0.3, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_otdgh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/flash_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2foc5"]
+_data = {
+&"RESET": SubResource("Animation_otdgh"),
+&"flash_hurt": SubResource("Animation_yfcli")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gbmu"]
 size = Vector2(32, 32)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otdgh"]
+size = Vector2(32, 32)
+
 [node name="mario" type="CharacterBody2D" groups=["player"]]
+collision_mask = 5
 script = ExtResource("1_oxdto")
 ice_jump_power = -300.0
 metadata/_custom_type_script = "uid://cwcgsdxxyjvab"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ymw4l")
 position = Vector2(4.76837e-07, -16)
 scale = Vector2(0.0592593, 0.0444444)
 texture = ExtResource("2_otdgh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -16)
-shape = SubResource("RectangleShape2D_5gbmu")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_2foc5")
+}
 
 [node name="checkice2" type="RayCast2D" parent="."]
 target_position = Vector2(32, 48)
@@ -32,4 +82,22 @@ target_position = Vector2(-32, 48)
 collision_mask = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.6, 1.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_5gbmu")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_otdgh")
+debug_color = Color(0.777096, 0.392452, 0.527721, 0.42)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

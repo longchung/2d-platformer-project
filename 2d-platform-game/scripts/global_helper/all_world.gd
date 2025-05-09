@@ -8,8 +8,6 @@ var level = 0
 var max_level=0
 var timer_max = 0
 var level_dictionary={}
-
-
 #on ready this function get all level scene in the level file and combine 
 #them into a dictionary
 func _ready() -> void:
@@ -26,4 +24,6 @@ func _process(_delta: float) -> void:
 	$"GUI/total_score".text = str(total_score)
 	$"GUI/coin".text = str(coin)
 	$"GUI/time".text = str(timer_max)
+	
+	
 	

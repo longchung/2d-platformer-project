@@ -1,15 +1,29 @@
-[gd_scene load_steps=6 format=3 uid="uid://ds524yr5y8f2q"]
+[gd_scene load_steps=9 format=3 uid="uid://ds524yr5y8f2q"]
 
 [ext_resource type="Script" uid="uid://dh2w0um7k7t5u" path="res://scripts/global_helper/all_world.gd" id="1_qgs48"]
 [ext_resource type="FontFile" uid="uid://d1wmclyqmtk6r" path="res://assets/theme/PixelOperator8.ttf" id="2_fbmv7"]
 [ext_resource type="Texture2D" uid="uid://budxlu6km21gs" path="res://assets/symbol/text coin.jpg" id="3_6x0i2"]
 [ext_resource type="Texture2D" uid="uid://bgapeuhxjvtcr" path="res://assets/symbol/test_clock.jpg" id="4_qu4r7"]
 [ext_resource type="Texture2D" uid="uid://76eabwe6dgy" path="res://assets/symbol/score_test.png" id="5_3lp5k"]
+[ext_resource type="Shader" uid="uid://5ebxj5e0f5ot" path="res://shader/crt_screen.gdshader" id="6_fbmv7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fbmv7"]
+shader = ExtResource("6_fbmv7")
+shader_parameter/vignette_multiplier = 0.8
+shader_parameter/curvature = 7.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_6x0i2"]
+size = Vector2(1152, 648)
+center_offset = Vector3(576, 324, 0)
 
 [node name="All_world" type="Node"]
 script = ExtResource("1_qgs48")
 
 [node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="GUI"]
+material = SubResource("ShaderMaterial_fbmv7")
+mesh = SubResource("QuadMesh_6x0i2")
 
 [node name="coin" type="Label" parent="GUI"]
 offset_left = 80.0

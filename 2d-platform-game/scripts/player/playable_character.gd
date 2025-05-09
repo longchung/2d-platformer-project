@@ -15,10 +15,10 @@ var jump_time = 0
 var current_speed= speed
 var current_jump= jump_power
 #each raycast check if tile standing on is ice.
-@onready var check_ice_mid: RayCast2D = $checkice
-@onready var check_ice_right: RayCast2D = $checkice2
-@onready var check_ice_left: RayCast2D = $checkice3
-
+@onready var check_ice_mid = $checkice
+@onready var check_ice_right = $checkice2
+@onready var check_ice_left = $checkice3
+@onready var hurt = $Sprite2D/AnimationPlayer
 func _physics_process(delta):
 	#check if player is in the air then begin to fall
 	if not is_on_floor():
@@ -66,5 +66,34 @@ func _physics_process(delta):
 			velocity.x =  lerp(velocity.x,0.0,0.005)
 			if velocity.x < 150 or velocity.x > -150:
 				velocity.x = 0.0
-
 	move_and_slide()
+	
+	
+#this is for when the player thit an obstacle
+#which is mask 3. They will reduce their score
+#by 10 and play the player flash a color 
+#animaion using the hurt shader
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if AllWorld.total_score > 0:
+		AllWorld.total_score -= 10
+	else:
+		AllWorld.total_score = 0
+	hurt.play("flash_hurt")
+	$Timer.start()
+
+# wait 2s to play the sader then stop it	
+func _on_timer_timeout() -> void:
+	hurt.stop()
+
+
+func _on_area_2d_2_area_entered(area: Area2D) -> void:
+	if AllWorld.total_score > 0:
+		AllWorld.total_score -= 10
+	else:
+		AllWorld.total_score = 0
+	hurt.play("flash_hurt")
+	$Timer2.start()
+
+
+func _on_timer_2_timeout() -> void:
+	hurt.stop()

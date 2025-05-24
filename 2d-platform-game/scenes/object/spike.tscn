@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw7ya7sdx4evj"]
+
+[ext_resource type="Script" uid="uid://ch2t8y2sa5gir" path="res://scripts/object/spike.gd" id="1_7a7y0"]
+[ext_resource type="Texture2D" uid="uid://cxec7laequu8w" path="res://assets/hazard/test_newspike.png" id="2_7a7y0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ljd5v"]
+size = Vector2(32, 16)
+
+[node name="spike" type="Area2D"]
+collision_layer = 5
+script = ExtResource("1_7a7y0")
+
+[node name="Sprite2d" type="Sprite2D" parent="."]
+position = Vector2(2.38419e-06, 9.53674e-07)
+scale = Vector2(0.0662526, 0.0740741)
+texture = ExtResource("2_7a7y0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ljd5v")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

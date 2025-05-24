@@ -1,0 +1,13 @@
+res://scenes/level/world1.tscn
+res://shader/crt_screen.gdshader
+res://shader/hurt.gdshader
+res://shader/lightdark.gdshader
+res://shader/snow.gdshader
+res://scenes/screen/highscore_scene.tscn
+res://scenes/screen/All_world.tscn
+res://scenes/object/coin.tscn
+res://scenes/enemy/koopa_trooper.tscn
+res://scenes/enemy/goomba.tscn
+res://scenes/object/moving_platform.tscn
+res://scenes/level/world2.tscn
+res://scripts/enemy/enemy_spawner.cs

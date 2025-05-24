@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://baj6ypcw04sy6"]
+
+[ext_resource type="Script" uid="uid://cnfude4a53uhy" path="res://scripts/enemy/goomba.gd" id="1_jsej0"]
+[ext_resource type="Script" uid="uid://bau5kdoj3d7oc" path="res://scripts/state/state_machine.gd" id="2_2o0ux"]
+[ext_resource type="Texture2D" uid="uid://vmjmgiqwk8yq" path="res://assets/mob/goomba.png" id="2_jsej0"]
+[ext_resource type="Script" uid="uid://bm8fh8iqk7q1p" path="res://scripts/state/idle.gd" id="4_q18fa"]
+[ext_resource type="Script" uid="uid://dee1sbpviqseo" path="res://scripts/state/targeting_player.gd" id="5_hvhv3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2o0ux"]
+size = Vector2(32, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1svd1"]
+size = Vector2(12, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvhv3"]
+size = Vector2(24, 24)
+
+[node name="goomba" type="CharacterBody2D"]
+script = ExtResource("1_jsej0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -12)
+scale = Vector2(0.0401802, 0.04)
+texture = ExtResource("2_jsej0")
+
+[node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("init_state")]
+script = ExtResource("2_2o0ux")
+init_state = NodePath("idle")
+
+[node name="idle" type="Node2D" parent="state_machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("4_q18fa")
+enemy = NodePath("../..")
+metadata/_custom_type_script = "uid://bm8fh8iqk7q1p"
+
+[node name="targeting_player" type="Node2D" parent="state_machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("5_hvhv3")
+enemy = NodePath("../..")
+metadata/_custom_type_script = "uid://dee1sbpviqseo"
+
+[node name="damage" type="Area2D" parent="."]
+
+[node name="damage_player" type="CollisionShape2D" parent="damage"]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_2o0ux")
+
+[node name="kill" type="Area2D" parent="."]
+
+[node name="kill_enemy" type="CollisionShape2D" parent="kill"]
+position = Vector2(0, -24)
+shape = SubResource("RectangleShape2D_1svd1")
+debug_color = Color(0.819303, 0.366339, 0.453437, 0.42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_hvhv3")
+debug_color = Color(0.123139, 0.627315, 0.457794, 0.42)
+
+[connection signal="body_entered" from="damage" to="." method="damage_player"]
+[connection signal="body_entered" from="kill" to="." method="_on_kill_body_entered"]

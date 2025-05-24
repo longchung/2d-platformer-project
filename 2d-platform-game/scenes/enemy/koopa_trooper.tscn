@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://dewr0m0wscmqs"]
+
+[ext_resource type="Texture2D" uid="uid://55u0ma2sdp6n" path="res://assets/mob/koopa.png" id="1_atyah"]
+[ext_resource type="Script" uid="uid://bogxtpkurvg7u" path="res://scripts/enemy/koopa_trooper.gd" id="1_jsej0"]
+[ext_resource type="Script" uid="uid://bau5kdoj3d7oc" path="res://scripts/state/state_machine.gd" id="2_jsej0"]
+[ext_resource type="Script" uid="uid://bm8fh8iqk7q1p" path="res://scripts/state/idle.gd" id="3_q18fa"]
+[ext_resource type="Script" uid="uid://dee1sbpviqseo" path="res://scripts/state/targeting_player.gd" id="4_c83g0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_atyah"]
+size = Vector2(16, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5am2"]
+size = Vector2(20, 16.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7y30"]
+size = Vector2(16, 11)
+
+[node name="koopa_trooper" type="CharacterBody2D"]
+script = ExtResource("1_jsej0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16.3849)
+scale = Vector2(0.027027, 0.0263422)
+texture = ExtResource("1_atyah")
+offset = Vector2(-36, 136)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_atyah")
+debug_color = Color(0.123139, 0.627315, 0.457794, 0.42)
+
+[node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("init_state")]
+script = ExtResource("2_jsej0")
+init_state = NodePath("idle")
+
+[node name="idle" type="Node2D" parent="state_machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("3_q18fa")
+enemy = NodePath("../..")
+metadata/_custom_type_script = "uid://bm8fh8iqk7q1p"
+
+[node name="targeting_player" type="Node2D" parent="state_machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("4_c83g0")
+enemy = NodePath("../..")
+metadata/_custom_type_script = "uid://dee1sbpviqseo"
+
+[node name="damage" type="Area2D" parent="."]
+
+[node name="damage_player" type="CollisionShape2D" parent="damage"]
+position = Vector2(0, -8.25)
+shape = SubResource("RectangleShape2D_h5am2")
+
+[node name="kill" type="Area2D" parent="."]
+
+[node name="kill_enemy" type="CollisionShape2D" parent="kill"]
+position = Vector2(0, -21.5)
+shape = SubResource("RectangleShape2D_w7y30")
+debug_color = Color(0.819303, 0.366339, 0.453437, 0.42)
+
+[connection signal="body_entered" from="damage" to="." method="damage_player"]
+[connection signal="body_entered" from="kill" to="." method="_on_kill_body_entered"]

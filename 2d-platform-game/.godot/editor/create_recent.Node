@@ -1,0 +1,14 @@
+Node2D
+Node
+Marker2D
+Moving_Plat
+Path2D
+CollisionShape2D
+Sprite2D
+CharacterBody2D
+Area2D
+targeting_player
+idle
+Timer
+ColorRect
+MeshInstance2D

@@ -1,0 +1,100 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm3eyounmflyf"]
+
+[ext_resource type="Theme" uid="uid://dwa6p1oymk4qf" path="res://assets/theme/default_theme.tres" id="1_rrg04"]
+[ext_resource type="Script" uid="uid://bop7c65sx7cbi" path="res://scripts/scene/main_menu.gd" id="2_i6gih"]
+[ext_resource type="FontFile" uid="uid://d1wmclyqmtk6r" path="res://assets/theme/PixelOperator8.ttf" id="3_dum7k"]
+
+[node name="Start of game" type="Node"]
+
+[node name="Start_menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_rrg04")
+script = ExtResource("2_i6gih")
+
+[node name="ColorRect" type="ColorRect" parent="Start_menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Start_menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Start_menu/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Start_menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_dum7k")
+theme_override_font_sizes/font_size = 32
+text = "Mario Test game (Alpha)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button_VBoxContainer" type="VBoxContainer" parent="Start_menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="Start_game_mario" type="Button" parent="Start_menu/MarginContainer/VBoxContainer/Button_VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../Quit_game")
+focus_neighbor_bottom = NodePath("../Start_game_luigi")
+focus_next = NodePath("../Start_game_luigi")
+focus_previous = NodePath("../Quit_game")
+text = "Start as Mario"
+
+[node name="Start_game_luigi" type="Button" parent="Start_menu/MarginContainer/VBoxContainer/Button_VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../Start_game_mario")
+focus_neighbor_bottom = NodePath("../Highscore")
+focus_next = NodePath("../Highscore")
+focus_previous = NodePath("../Start_game_mario")
+text = "Start as Luigi"
+
+[node name="Highscore" type="Button" parent="Start_menu/MarginContainer/VBoxContainer/Button_VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../Start_game_luigi")
+focus_neighbor_bottom = NodePath("../Quit_game")
+focus_next = NodePath("../Quit_game")
+focus_previous = NodePath("../Start_game_luigi")
+text = "HighScore"
+
+[node name="Quit_game" type="Button" parent="Start_menu/MarginContainer/VBoxContainer/Button_VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../Highscore")
+focus_neighbor_bottom = NodePath("../Start_game_mario")
+focus_next = NodePath("../Start_game_mario")
+focus_previous = NodePath("../Highscore")
+text = "Quit"
+
+[connection signal="pressed" from="Start_menu/MarginContainer/VBoxContainer/Button_VBoxContainer/Start_game_mario" to="Start_menu" method="_on_start_game_pressed"]
+[connection signal="pressed" from="Start_menu/MarginContainer/VBoxContainer/Button_VBoxContainer/Start_game_luigi" to="Start_menu" method="_on_start_game_luigi_pressed"]
+[connection signal="pressed" from="Start_menu/MarginContainer/VBoxContainer/Button_VBoxContainer/Highscore" to="Start_menu" method="_on_highscore_pressed"]
+[connection signal="pressed" from="Start_menu/MarginContainer/VBoxContainer/Button_VBoxContainer/Quit_game" to="Start_menu" method="_on_quit_game_pressed"]

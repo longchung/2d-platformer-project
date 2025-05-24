@@ -6,7 +6,7 @@ using System.Collections.Generic;
 // add a back_to_start Marker2D node and an enemy_spawner Node2D node.
 // In the enemy_spawner node, attach Maker#  Marker2D node to it to designate
 // where the enemy should spawn and attach this script to the enemy_spawner node
-
+// I haven't used c# in Godot before so my understanding and cleanliness may not be the best
 	public partial class enemy_spawner : Node2D{	
 		//this is the prototype abstract class
 		public abstract partial class Prototype: Node{

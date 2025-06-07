@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=4 uid="uid://bjruqowokjvj6"]
+[gd_scene load_steps=17 format=4 uid="uid://bjruqowokjvj6"]
 
 [ext_resource type="Texture2D" uid="uid://bqh4mxsdc3iow" path="res://assets/tilemap/NES - Super Mario Bros - Tileset.png" id="1_5yjdw"]
 [ext_resource type="PackedScene" uid="uid://cfu3ld88h44e2" path="res://scenes/player/player_spawn.tscn" id="2_5yjdw"]
 [ext_resource type="PackedScene" uid="uid://bq37cmafb6crt" path="res://scenes/object/coin.tscn" id="4_iv34c"]
 [ext_resource type="PackedScene" uid="uid://bfvn4o73pkffl" path="res://scenes/object/moving_platform.tscn" id="6_0l3ui"]
 [ext_resource type="Script" uid="uid://bdtdnlgrhh2qs" path="res://scripts/enemy/enemy_spawner.cs" id="6_5yjdw"]
+[ext_resource type="AudioStream" uid="uid://ck0ee67aqenqo" path="res://sound/music/5 - Swimming Around.mp3" id="7_3ka8j"]
 [ext_resource type="PackedScene" uid="uid://dwaqcb01b5gjo" path="res://scenes/object/flag.tscn" id="8_iv34c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xoif0"]
@@ -3500,23 +3501,31 @@ scale = Vector2(1, 1.09375)
 curve = SubResource("Curve2D_3ka8j")
 
 [node name="flag" parent="." instance=ExtResource("8_iv34c")]
-position = Vector2(6016, -608)
+process_mode = 3
+position = Vector2(6016, -592)
 
-[node name="back_to_start" type="Marker2D" parent="."]
-position = Vector2(-656, -520)
+[node name="enemy" type="Node" parent="."]
 
-[node name="enemy_spawner" type="Node2D" parent="."]
-position = Vector2(-592, -504)
+[node name="back_to_start" type="Marker2D" parent="enemy"]
+position = Vector2(608, -504)
+
+[node name="enemy_spawner" type="Node2D" parent="enemy"]
+position = Vector2(672, -488)
 script = ExtResource("6_5yjdw")
 
-[node name="Marker1" type="Marker2D" parent="enemy_spawner"]
+[node name="Marker1" type="Marker2D" parent="enemy/enemy_spawner"]
 position = Vector2(424, 8)
 
-[node name="Marker2" type="Marker2D" parent="enemy_spawner"]
+[node name="Marker2" type="Marker2D" parent="enemy/enemy_spawner"]
 position = Vector2(1592, 8)
 
-[node name="Marker3" type="Marker2D" parent="enemy_spawner"]
+[node name="Marker3" type="Marker2D" parent="enemy/enemy_spawner"]
 position = Vector2(3944, 8)
 
-[node name="Marker4" type="Marker2D" parent="enemy_spawner"]
+[node name="Marker4" type="Marker2D" parent="enemy/enemy_spawner"]
 position = Vector2(5880, 8)
+
+[node name="world1-2_bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_3ka8j")
+autoplay = true
+bus = &"bgm"

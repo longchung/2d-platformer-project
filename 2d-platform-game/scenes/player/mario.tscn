@@ -1,18 +1,74 @@
-[gd_scene load_steps=14 format=3 uid="uid://8pip7ndxai7d"]
+[gd_scene load_steps=23 format=3 uid="uid://8pip7ndxai7d"]
 
 [ext_resource type="Script" uid="uid://cwcgsdxxyjvab" path="res://scripts/player/playable_character.gd" id="1_oxdto"]
 [ext_resource type="Shader" uid="uid://h2bi8xstmqu4" path="res://shader/hurt.gdshader" id="2_mtv85"]
-[ext_resource type="Texture2D" uid="uid://bf1a6c5tgmdq2" path="res://assets/mob/test_mario.webp" id="2_otdgh"]
+[ext_resource type="Texture2D" uid="uid://bqonl3ss8ihkj" path="res://assets/mob/mario.png" id="3_qbr2u"]
 [ext_resource type="Shader" uid="uid://bqhmthb2mdu3c" path="res://shader/lightdark.gdshader" id="4_mtv85"]
 [ext_resource type="Shader" uid="uid://cukiu12374ql7" path="res://shader/snow.gdshader" id="4_ymw4l"]
+[ext_resource type="PackedScene" uid="uid://7j4hs46rvcl1" path="res://scenes/screen/pause_menu.tscn" id="6_2foc5"]
+[ext_resource type="AudioStream" uid="uid://mn1ow1g8ltn6" path="res://sound/soundeffect/smb3_jump.wav" id="6_yfcli"]
+[ext_resource type="AudioStream" uid="uid://dkogrutskgk1c" path="res://sound/soundeffect/footstep-mario-64.mp3" id="7_qbr2u"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ymw4l"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qbr2u"]
 shader = ExtResource("2_mtv85")
-shader_parameter/flash_color = Color(0.827451, 0, 0.184314, 0.0431373)
+shader_parameter/flash_color = Color(0.768627, 0, 0, 0.619608)
 shader_parameter/flash_value = 0.3
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbr2u"]
+atlas = ExtResource("3_qbr2u")
+region = Rect2(205, 0, 25, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2foc5"]
+atlas = ExtResource("3_qbr2u")
+region = Rect2(354, 0, 29, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2hfo"]
+atlas = ExtResource("3_qbr2u")
+region = Rect2(295, 0, 26, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0d3l"]
+atlas = ExtResource("3_qbr2u")
+region = Rect2(235, 0, 26, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ciiss"]
+atlas = ExtResource("3_qbr2u")
+region = Rect2(263, 0, 28, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_trtfn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbr2u")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2foc5")
+}],
+"loop": false,
+"name": &"jumping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2hfo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0d3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ciiss")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
 [sub_resource type="Animation" id="Animation_otdgh"]
-length = 0.001
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -52,6 +108,11 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gbmu"]
 size = Vector2(32, 32)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mtv85"]
+shader = ExtResource("4_mtv85")
+shader_parameter/bright = 0.0
+shader_parameter/bright2 = 0.0
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yfcli"]
 shader = ExtResource("4_ymw4l")
 shader_parameter/screen_layers = 50.0
@@ -60,11 +121,6 @@ shader_parameter/snow_density = 0.5
 shader_parameter/fall_speed = 0.5
 shader_parameter/wind_speed = 0.0
 shader_parameter/snowon = 1.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mtv85"]
-shader = ExtResource("4_mtv85")
-shader_parameter/bright = 0.0
-shader_parameter/bright2 = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_otdgh"]
 size = Vector2(32, 32)
@@ -75,13 +131,14 @@ script = ExtResource("1_oxdto")
 ice_jump_power = -300.0
 metadata/_custom_type_script = "uid://cwcgsdxxyjvab"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_ymw4l")
-position = Vector2(4.76837e-07, -16)
-scale = Vector2(0.0592593, 0.0444444)
-texture = ExtResource("2_otdgh")
+[node name="playersprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_qbr2u")
+position = Vector2(-1.19209e-06, -16)
+scale = Vector2(1.52381, 1.88235)
+sprite_frames = SubResource("SpriteFrames_trtfn")
+animation = &"idle"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="playersprite"]
 libraries = {
 &"": SubResource("AnimationLibrary_2foc5")
 }
@@ -103,12 +160,13 @@ shape = SubResource("RectangleShape2D_5gbmu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="ColorRect2" type="ColorRect" parent="Camera2D"]
-material = SubResource("ShaderMaterial_yfcli")
+[node name="pause_menu" parent="Camera2D" node_paths=PackedStringArray("current") instance=ExtResource("6_2foc5")]
+visible = false
 offset_left = -576.0
 offset_top = -328.0
 offset_right = 576.0
-offset_bottom = 328.0
+offset_bottom = 320.0
+current = NodePath("..")
 
 [node name="ColorRect" type="ColorRect" parent="Camera2D"]
 material = SubResource("ShaderMaterial_mtv85")
@@ -116,6 +174,13 @@ offset_left = -576.0
 offset_top = -320.0
 offset_right = 576.0
 offset_bottom = 320.0
+
+[node name="ColorRect2" type="ColorRect" parent="Camera2D"]
+material = SubResource("ShaderMaterial_yfcli")
+offset_left = -576.0
+offset_top = -328.0
+offset_right = 576.0
+offset_bottom = 328.0
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
@@ -128,6 +193,14 @@ debug_color = Color(0.777096, 0.392452, 0.527721, 0.42)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="jump_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_yfcli")
+bus = &"player"
+
+[node name="walk_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_qbr2u")
+bus = &"player"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

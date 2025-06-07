@@ -7,7 +7,13 @@ var total_score = 0
 var level = 0
 var max_level=0
 var timer_max = 0
+var play_sound=0
+var play_sound2=0
 var level_dictionary={}
+@onready var enemydie: AudioStreamPlayer = $enemydie
+@onready var mario_ouch: AudioStreamPlayer = $mario_ouch
+@onready var luigi_ouch: AudioStreamPlayer = $luigi_ouch
+
 #on ready this function get all level scene in the level file and combine 
 #them into a dictionary
 func _ready() -> void:
@@ -25,5 +31,17 @@ func _process(_delta: float) -> void:
 	$"GUI/coin".text = str(coin)
 	$"GUI/time".text = str(timer_max)
 	
+	if play_sound ==1:
+		enemydie.play()
+		play_sound=0
 	
+	if play_sound2 ==2:
+		mario_ouch.play()
+		play_sound2=0
+		
+	if  play_sound2 ==3:
+		luigi_ouch.play()
+		play_sound2=0
+	
+
 	

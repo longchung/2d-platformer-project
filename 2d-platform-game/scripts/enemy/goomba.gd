@@ -1,4 +1,6 @@
 extends CharacterBody2D
+
+
 func _physics_process(delta: float) -> void:
 	var grav = 1000.0
 	if not is_on_floor():
@@ -23,6 +25,7 @@ func damage_player(body: Node2D) -> void:
 # then clear it
 func _on_kill_body_entered(body: Node2D) -> void:
 	if body.is_in_group('player'):
+		AllWorld.play_sound=1
 		AllWorld.total_score+=20
 		self.queue_free()
 

@@ -22,8 +22,8 @@ func damage_player(body: Node2D) -> void:
 
 # this is for when the player hit one the head, add 20 point to the player
 # then clear it
-func _on_kill_body_entered(body: Node2D) -> void:
-	if body.is_in_group('player'):
-		AllWorld.total_score+=20
-		self.queue_free()
-		
+#func _on_kill_body_entered(body: Node2D) -> void:
+	#if body.is_in_group('player'):
+		#AllWorld.play_sound=1
+		#AllWorld.total_score+=20
+		#self.queue_free()

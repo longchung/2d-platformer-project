@@ -1,15 +1,71 @@
-[gd_scene load_steps=14 format=3 uid="uid://cxhn5h3ogg0di"]
+[gd_scene load_steps=23 format=3 uid="uid://cxhn5h3ogg0di"]
 
 [ext_resource type="Script" uid="uid://cwcgsdxxyjvab" path="res://scripts/player/playable_character.gd" id="1_voq27"]
 [ext_resource type="Shader" uid="uid://h2bi8xstmqu4" path="res://shader/hurt.gdshader" id="2_rwvwo"]
-[ext_resource type="Texture2D" uid="uid://ee4ll06d72ww" path="res://assets/mob/test_luigi.png" id="2_voq27"]
+[ext_resource type="Texture2D" uid="uid://d33yi42p2kved" path="res://assets/mob/luigi.png" id="3_q2kos"]
 [ext_resource type="Shader" uid="uid://bqhmthb2mdu3c" path="res://shader/lightdark.gdshader" id="4_iyxnd"]
 [ext_resource type="Shader" uid="uid://cukiu12374ql7" path="res://shader/snow.gdshader" id="5_rdjqu"]
+[ext_resource type="AudioStream" uid="uid://mn1ow1g8ltn6" path="res://sound/soundeffect/smb3_jump.wav" id="6_j113q"]
+[ext_resource type="PackedScene" uid="uid://7j4hs46rvcl1" path="res://scenes/screen/pause_menu.tscn" id="6_lfsv3"]
+[ext_resource type="AudioStream" uid="uid://dkogrutskgk1c" path="res://sound/soundeffect/footstep-mario-64.mp3" id="7_q2kos"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_iyxnd"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lfsv3"]
 shader = ExtResource("2_rwvwo")
 shader_parameter/flash_color = Color(0, 0, 0, 1)
 shader_parameter/flash_value = 0.3
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2kos"]
+atlas = ExtResource("3_q2kos")
+region = Rect2(205, 0, 25, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2sea"]
+atlas = ExtResource("3_q2kos")
+region = Rect2(355, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygigc"]
+atlas = ExtResource("3_q2kos")
+region = Rect2(295, 0, 26, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cy3e4"]
+atlas = ExtResource("3_q2kos")
+region = Rect2(266, 0, 24, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfq2r"]
+atlas = ExtResource("3_q2kos")
+region = Rect2(235, 0, 24, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_njyc0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2kos")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2sea")
+}],
+"loop": true,
+"name": &"jumping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygigc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cy3e4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfq2r")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="Animation" id="Animation_otdgh"]
 length = 0.001
@@ -74,13 +130,16 @@ script = ExtResource("1_voq27")
 double_jump = true
 metadata/_custom_type_script = "uid://cwcgsdxxyjvab"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_iyxnd")
-position = Vector2(-4.76837e-07, -16)
-scale = Vector2(0.0359551, 0.0269587)
-texture = ExtResource("2_voq27")
+[node name="playersprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_lfsv3")
+position = Vector2(-1.01328e-06, -16)
+scale = Vector2(1.33333, 1.6)
+sprite_frames = SubResource("SpriteFrames_njyc0")
+animation = &"walk"
+frame = 2
+frame_progress = 0.356492
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="playersprite"]
 libraries = {
 &"": SubResource("AnimationLibrary_2foc5")
 }
@@ -102,6 +161,14 @@ shape = SubResource("RectangleShape2D_5gbmu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="pause_menu" parent="Camera2D" node_paths=PackedStringArray("current") instance=ExtResource("6_lfsv3")]
+visible = false
+offset_left = -576.0
+offset_top = -328.0
+offset_right = 576.0
+offset_bottom = 320.0
+current = NodePath("..")
+
 [node name="ColorRect" type="ColorRect" parent="Camera2D"]
 material = SubResource("ShaderMaterial_rdjqu")
 offset_left = -576.0
@@ -112,9 +179,9 @@ offset_bottom = 320.0
 [node name="ColorRect2" type="ColorRect" parent="Camera2D"]
 material = SubResource("ShaderMaterial_j113q")
 offset_left = -576.0
-offset_top = -328.0
+offset_top = -320.0
 offset_right = 576.0
-offset_bottom = 328.0
+offset_bottom = 336.0
 
 [node name="Area2D2" type="Area2D" parent="."]
 collision_layer = 0
@@ -127,6 +194,14 @@ debug_color = Color(0.777096, 0.392452, 0.527721, 0.42)
 
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="jump_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_j113q")
+bus = &"player"
+
+[node name="walk_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_q2kos")
+bus = &"player"
 
 [connection signal="area_entered" from="Area2D2" to="." method="_on_area_2d_2_area_entered"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

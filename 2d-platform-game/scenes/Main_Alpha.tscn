@@ -46,7 +46,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("3_dum7k")
 theme_override_font_sizes/font_size = 32
-text = "Mario Test game (Alpha)"
+text = "Mario Test game (Beta)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -62,7 +62,7 @@ focus_neighbor_top = NodePath("../Quit_game")
 focus_neighbor_bottom = NodePath("../Start_game_luigi")
 focus_next = NodePath("../Start_game_luigi")
 focus_previous = NodePath("../Quit_game")
-text = "Start as Mario"
+text = "Start as Mario ( Normal)"
 
 [node name="Start_game_luigi" type="Button" parent="Start_menu/MarginContainer/VBoxContainer/Button_VBoxContainer"]
 layout_mode = 2
@@ -72,7 +72,7 @@ focus_neighbor_top = NodePath("../Start_game_mario")
 focus_neighbor_bottom = NodePath("../Highscore")
 focus_next = NodePath("../Highscore")
 focus_previous = NodePath("../Start_game_mario")
-text = "Start as Luigi"
+text = "Start as Luigi ( Easy)"
 
 [node name="Highscore" type="Button" parent="Start_menu/MarginContainer/VBoxContainer/Button_VBoxContainer"]
 layout_mode = 2

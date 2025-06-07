@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Documents\\to git\\2d-platform-game\\2d platform game.csproj": {}
+    "C:\\Users\\ASUS\\Documents\\to_git\\2d-platform-game\\2d platform game.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Documents\\to git\\2d-platform-game\\2d platform game.csproj": {
+    "C:\\Users\\ASUS\\Documents\\to_git\\2d-platform-game\\2d platform game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Documents\\to git\\2d-platform-game\\2d platform game.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Documents\\to_git\\2d-platform-game\\2d platform game.csproj",
         "projectName": "2d platform game",
-        "projectPath": "C:\\Users\\ASUS\\Documents\\to git\\2d-platform-game\\2d platform game.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Documents\\to_git\\2d-platform-game\\2d platform game.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Documents\\to git\\2d-platform-game\\.godot\\mono\\temp\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Documents\\to_git\\2d-platform-game\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config"

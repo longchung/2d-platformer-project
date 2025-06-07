@@ -7,10 +7,10 @@
 [ext_resource type="Script" uid="uid://dee1sbpviqseo" path="res://scripts/state/targeting_player.gd" id="5_hvhv3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2o0ux"]
-size = Vector2(32, 20)
+size = Vector2(28, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1svd1"]
-size = Vector2(12, 8)
+size = Vector2(16, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hvhv3"]
 size = Vector2(24, 24)
@@ -38,15 +38,16 @@ enemy = NodePath("../..")
 metadata/_custom_type_script = "uid://dee1sbpviqseo"
 
 [node name="damage" type="Area2D" parent="."]
+collision_layer = 5
 
 [node name="damage_player" type="CollisionShape2D" parent="damage"]
-position = Vector2(0, -10)
+position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_2o0ux")
 
 [node name="kill" type="Area2D" parent="."]
 
 [node name="kill_enemy" type="CollisionShape2D" parent="kill"]
-position = Vector2(0, -24)
+position = Vector2(0, -22)
 shape = SubResource("RectangleShape2D_1svd1")
 debug_color = Color(0.819303, 0.366339, 0.453437, 0.42)
 

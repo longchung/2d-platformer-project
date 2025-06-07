@@ -1,19 +1,23 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1748060206
+::res://::1749182977
+default_bus_layout.tres::AudioBusLayout/AudioBusLayout::853445656050320190::1749113028::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::3948650507859658347::1745378219::1745378232::1::::<><><>0<>0<>f12e6c9cba262f5c654544bed4cec1bd<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-Saved_highscore.txt::TextFile/TextFile::-1::1746739888::0::1::::<><><>0<>0<><>::
+Saved_highscore.txt::TextFile/TextFile::-1::1749156832::0::1::::<><><>0<>0<><>::
 ::res://assets/::1746642190
 ::res://assets/coin/::1748059256
 Collected.png::CompressedTexture2D/CompressedTexture2D::9005231512611827339::1746590371::1746593252::1::::<><><>0<>0<>01e770b7771036e29aeca78f3a8d650c<>res://.godot/imported/Collected.png-158e395d5542f06c8b343b426ad56e4e.ctex::
 MonedaD.png::CompressedTexture2D/CompressedTexture2D::3700112566329832812::1746423144::1746504601::1::::<><><>0<>0<>089df60bb29822dc47a9065ddc0882b3<>res://.godot/imported/MonedaD.png-b9ceb5a5de2c68eee5432d585b675103.ctex::
-::res://assets/hazard/::1746642190
+::res://assets/hazard/::1748403828
+flag animation.png::CompressedTexture2D/CompressedTexture2D::5109273181738449094::1748403675::1748403828::1::::<><><>0<>0<>3d00362a92b7c956e71881e4b3a8740a<>res://.godot/imported/flag animation.png-ca62c4ae7e7194527356a2b926aa41bd.ctex::
 platform_move.png::CompressedTexture2D/CompressedTexture2D::2785009644479228282::1745901879::1746642188::1::::<><><>0<>0<>cf83eb3d6b1c03243435c91447e9092c<>res://.godot/imported/platform_move.png-f61046974874b4e55ed8ac10b1ee0841.ctex::
 test_newspike.png::CompressedTexture2D/CompressedTexture2D::6395621439428460648::1746424408::1746642190::1::::<><><>0<>0<>e394bb42044e9f28cf7f91599d7c5a1e<>res://.godot/imported/test_newspike.png-a92d977b7f6bde74298470711ac6c032.ctex::
-::res://assets/mob/::1748059366
+::res://assets/mob/::1748377539
 flying trooper.jpg::CompressedTexture2D/CompressedTexture2D::3442166856240508871::1747884462::1747884477::1::::<><><>0<>0<>7a0add58bc887293e010d7c507103d02<>res://.godot/imported/flying trooper.jpg-3042a8e097f78f54af2102bf9282fc83.ctex::
 goomba.png::CompressedTexture2D/CompressedTexture2D::1499306460164488692::1747882847::1747882953::1::::<><><>0<>0<>04915dc89101f4d72702132837a21019<>res://.godot/imported/goomba.png-607b0c300aea9aee433bde1303fe346f.ctex::
 koopa.png::CompressedTexture2D/CompressedTexture2D::2168856257996865023::1747882891::1747882953::1::::<><><>0<>0<>c61501158748094740324c25eda7a1ec<>res://.godot/imported/koopa.png-2e3c1d553713ced979aa6908c8db36b2.ctex::
 koopa_shell.png::CompressedTexture2D/CompressedTexture2D::8279957096552286535::1747882916::1747882953::1::::<><><>0<>0<>0b8ba0fe6a25a2a4e8e5eddce8ee88b0<>res://.godot/imported/koopa_shell.png-849c27edc59bf5bdda7065d75e0bdc76.ctex::
+luigi.png::CompressedTexture2D/CompressedTexture2D::9183825309840421247::1748377496::1748377539::1::::<><><>0<>0<>30f89e156a58a93e2567ca72dfa05064<>res://.godot/imported/luigi.png-63ce98b576cded66436beaf9c3db77d7.ctex::
+mario.png::CompressedTexture2D/CompressedTexture2D::3539153934419917065::1748374758::1748374810::1::::<><><>0<>0<>f937f45611699ccdd6cbea9ab3e15892<>res://.godot/imported/mario.png-61a1dfa5c582e3435579924be843dedb.ctex::
 slime_green.png::CompressedTexture2D/CompressedTexture2D::2407925246731109217::1746423152::1746593321::1::::<><><>0<>0<>b1191bb5ff6136f4480f480829f8306d<>res://.godot/imported/slime_green.png-8d075579f3f57c28b58d00b6c998ef44.ctex::
 test_luigi.png::CompressedTexture2D/CompressedTexture2D::290793939882308798::1746603371::1746642097::1::::<><><>0<>0<>9546342f4ea4b20da258048064b6447d<>res://.godot/imported/test_luigi.png-5881f1218f3e2c72c1fb2ca84ef533c4.ctex::
 test_mario.webp::CompressedTexture2D/CompressedTexture2D::2791094235362468455::1745391910::1746593316::1::::<><><>0<>0<>c4b20108065d30fee541c9a792053d5b<>res://.godot/imported/test_mario.webp-7ccd5c1ee6edf05c3fc9fdc9fd8aac8f.ctex::
@@ -30,52 +34,73 @@ PixelOperator8.ttf::FontFile/FontFile::9030321087334387375::1746423174::17465045
 NES - Super Mario Bros - Tileset.png::CompressedTexture2D/CompressedTexture2D::3525676284480745842::1745905843::1746593384::1::::<><><>0<>0<>9bb45ba7dc5101cb718a54d26c8abfb5<>res://.godot/imported/NES - Super Mario Bros - Tileset.png-081fe6a51a1c5733add0eb097612dd88.ctex::
 platforms.png::CompressedTexture2D/CompressedTexture2D::7708978768223512321::1746423152::1746593386::1::::<><><>0<>0<>23970282e69d3702eadb20462ffc0418<>res://.godot/imported/platforms.png-ceddb897e84989621d9261096ca4558d.ctex::
 world_tileset.png::CompressedTexture2D/CompressedTexture2D::3236396342611294647::1746423152::1746593390::1::::<><><>0<>0<>9efa51add409a2ac8d95ed5795e1ad50<>res://.godot/imported/world_tileset.png-8aa78ec3bcd68d3c327df957b780731b.ctex::
-::res://scenes/::1747885305
-Main_Alpha.tscn::PackedScene/PackedScene::3286775878317843689::1746826944::0::1::::<><><>0<>0<><>::uid://dwa6p1oymk4qf::::res://assets/theme/default_theme.tres<>uid://bop7c65sx7cbi::::res://scripts/scene/main_menu.gd<>uid://d1wmclyqmtk6r::::res://assets/theme/PixelOperator8.ttf
-::res://scenes/enemy/::1748059716
-goomba.tscn::PackedScene::2406925961283127119::1748059716::0::1::::<><><>0<>0<><>::uid://cnfude4a53uhy::::res://scripts/enemy/goomba.gd<>uid://bau5kdoj3d7oc::::res://scripts/state/state_machine.gd<>uid://vmjmgiqwk8yq::::res://assets/mob/goomba.png<>uid://bm8fh8iqk7q1p::::res://scripts/state/idle.gd<>uid://dee1sbpviqseo::::res://scripts/state/targeting_player.gd
-koopa_trooper.tscn::PackedScene::7486511239869438610::1748059716::0::1::::<><><>0<>0<><>::uid://55u0ma2sdp6n::::res://assets/mob/koopa.png<>uid://bogxtpkurvg7u::::res://scripts/enemy/koopa_trooper.gd<>uid://bau5kdoj3d7oc::::res://scripts/state/state_machine.gd<>uid://bm8fh8iqk7q1p::::res://scripts/state/idle.gd<>uid://dee1sbpviqseo::::res://scripts/state/targeting_player.gd
-::res://scenes/level/::1748059716
-world1.tscn::PackedScene::212232098062400292::1748059715::0::1::::<><><>0<>0<><>::uid://bqh4mxsdc3iow::::res://assets/tilemap/NES - Super Mario Bros - Tileset.png<>uid://cfu3ld88h44e2::::res://scenes/player/player_spawn.tscn<>uid://bq37cmafb6crt::::res://scenes/object/coin.tscn<>uid://dwaqcb01b5gjo::::res://scenes/object/flag.tscn<>uid://dw7ya7sdx4evj::::res://scenes/object/spike.tscn<>uid://bfvn4o73pkffl::::res://scenes/object/moving_platform.tscn<>uid://bdtdnlgrhh2qs::::res://scripts/enemy/enemy_spawner.cs
-world2.tscn::PackedScene::3054458380774653133::1748059716::0::1::::<><><>0<>0<><>::uid://bqh4mxsdc3iow::::res://assets/tilemap/NES - Super Mario Bros - Tileset.png<>uid://cfu3ld88h44e2::::res://scenes/player/player_spawn.tscn<>uid://bq37cmafb6crt::::res://scenes/object/coin.tscn<>uid://bfvn4o73pkffl::::res://scenes/object/moving_platform.tscn<>uid://bdtdnlgrhh2qs::::res://scripts/enemy/enemy_spawner.cs<>uid://dwaqcb01b5gjo::::res://scenes/object/flag.tscn
-::res://scenes/object/::1748059716
-coin.tscn::PackedScene::3569191904881566085::1748059716::0::1::::<><><>0<>0<><>::uid://bsymkwi4jrf2k::::res://assets/coin/MonedaD.png<>uid://cnhc1mfhxqtnl::::res://scripts/object/coin.gd
-flag.tscn::PackedScene/PackedScene::8704391746915393112::1746611285::0::1::::<><><>0<>0<><>::uid://kik58bo7qjfr::::res://scripts/object/flag.gd<>uid://bwi0xxxj6mr44::::res://icon.svg
-moving_platform.tscn::PackedScene::2781558729701003529::1748059716::0::1::::<><><>0<>0<><>::uid://262ne138xrg3::::res://scripts/object/moving_platform.gd<>uid://bfxcx4poqn6l7::::res://assets/hazard/platform_move.png
+::res://scenes/::1749161029
+Main_Alpha.tscn::PackedScene::3286775878317843689::1749161029::0::1::::<><><>0<>0<><>::uid://dwa6p1oymk4qf::::res://assets/theme/default_theme.tres<>uid://bop7c65sx7cbi::::res://scripts/scene/main_menu.gd<>uid://d1wmclyqmtk6r::::res://assets/theme/PixelOperator8.ttf
+::res://scenes/enemy/::1749161268
+goomba.tscn::PackedScene/PackedScene::2406925961283127119::1749153314::0::1::::<><><>0<>0<><>::uid://cnfude4a53uhy::::res://scripts/enemy/goomba.gd<>uid://bau5kdoj3d7oc::::res://scripts/state/state_machine.gd<>uid://vmjmgiqwk8yq::::res://assets/mob/goomba.png<>uid://bm8fh8iqk7q1p::::res://scripts/state/idle.gd<>uid://dee1sbpviqseo::::res://scripts/state/targeting_player.gd
+koopa_trooper.tscn::PackedScene::7486511239869438610::1749161268::0::1::::<><><>0<>0<><>::uid://55u0ma2sdp6n::::res://assets/mob/koopa.png<>uid://bogxtpkurvg7u::::res://scripts/enemy/koopa_trooper.gd<>uid://cny22uxs24ew5::::res://scripts/state/state_machinekoopa.gd<>uid://3vt3u42ps32e::::res://scripts/state/idlekoopa.gd<>uid://qxk5f8xengek::::res://scripts/state/targeting_playerkoopa.gd<>uid://bg6x023e2blv4::::res://scripts/state/shell.gd
+::res://scenes/level/::1749161030
+world1.tscn::PackedScene::212232098062400292::1749161030::0::1::::<><><>0<>0<><>::uid://bqh4mxsdc3iow::::res://assets/tilemap/NES - Super Mario Bros - Tileset.png<>uid://cfu3ld88h44e2::::res://scenes/player/player_spawn.tscn<>uid://bq37cmafb6crt::::res://scenes/object/coin.tscn<>uid://dwaqcb01b5gjo::::res://scenes/object/flag.tscn<>uid://dw7ya7sdx4evj::::res://scenes/object/spike.tscn<>uid://bfvn4o73pkffl::::res://scenes/object/moving_platform.tscn<>uid://bdtdnlgrhh2qs::::res://scripts/enemy/enemy_spawner.cs<>uid://d25hetl7x4pal::::res://sound/music/1 - Running About.mp3
+world2.tscn::PackedScene/PackedScene::3054458380774653133::1749156659::0::1::::<><><>0<>0<><>::uid://bqh4mxsdc3iow::::res://assets/tilemap/NES - Super Mario Bros - Tileset.png<>uid://cfu3ld88h44e2::::res://scenes/player/player_spawn.tscn<>uid://bq37cmafb6crt::::res://scenes/object/coin.tscn<>uid://bfvn4o73pkffl::::res://scenes/object/moving_platform.tscn<>uid://bdtdnlgrhh2qs::::res://scripts/enemy/enemy_spawner.cs<>uid://ck0ee67aqenqo::::res://sound/music/5 - Swimming Around.mp3<>uid://dwaqcb01b5gjo::::res://scenes/object/flag.tscn
+world3.tscn::PackedScene/PackedScene::796531575391152499::1749156659::0::1::::<><><>0<>0<><>::uid://bqh4mxsdc3iow::::res://assets/tilemap/NES - Super Mario Bros - Tileset.png<>uid://cfu3ld88h44e2::::res://scenes/player/player_spawn.tscn<>uid://bq37cmafb6crt::::res://scenes/object/coin.tscn<>uid://dwaqcb01b5gjo::::res://scenes/object/flag.tscn<>uid://h24o1j6dv1ca::::res://sound/music/3 - Underground.mp3
+::res://scenes/object/::1749161029
+coin.tscn::PackedScene/PackedScene::3569191904881566085::1749104903::0::1::::<><><>0<>0<><>::uid://bsymkwi4jrf2k::::res://assets/coin/MonedaD.png<>uid://cnhc1mfhxqtnl::::res://scripts/object/coin.gd<>uid://dc2b1tf7tdvl7::::res://sound/soundeffect/smb3_coin.wav
+flag.tscn::PackedScene::8704391746915393112::1749161029::0::1::::<><><>0<>0<><>::uid://kik58bo7qjfr::::res://scripts/object/flag.gd<>uid://ce178ofd45kb3::::res://assets/hazard/flag animation.png<>uid://xfof63ipt11y::::res://sound/music/52ac54_super_mario_bros_stage_clear_sound_effect.mp3
+moving_platform.tscn::PackedScene/PackedScene::2781558729701003529::1749153315::0::1::::<><><>0<>0<><>::uid://262ne138xrg3::::res://scripts/object/moving_platform.gd<>uid://bfxcx4poqn6l7::::res://assets/hazard/platform_move.png
 spike.tscn::PackedScene/PackedScene::8770935615794194843::1747892198::0::1::::<><><>0<>0<><>::uid://ch2t8y2sa5gir::::res://scripts/object/spike.gd<>uid://cxec7laequu8w::::res://assets/hazard/test_newspike.png
-::res://scenes/player/::1748056085
-luigi.tscn::PackedScene/PackedScene::6402478721624829730::1748056085::0::1::::<><><>0<>0<><>::uid://cwcgsdxxyjvab::::res://scripts/player/playable_character.gd<>uid://h2bi8xstmqu4::::res://shader/hurt.gdshader<>uid://ee4ll06d72ww::::res://assets/mob/test_luigi.png<>uid://bqhmthb2mdu3c::::res://shader/lightdark.gdshader<>uid://cukiu12374ql7::::res://shader/snow.gdshader
-mario.tscn::PackedScene/PackedScene::2347711730213384819::1748056085::0::1::::<><><>0<>0<><>::uid://cwcgsdxxyjvab::::res://scripts/player/playable_character.gd<>uid://h2bi8xstmqu4::::res://shader/hurt.gdshader<>uid://bf1a6c5tgmdq2::::res://assets/mob/test_mario.webp<>uid://bqhmthb2mdu3c::::res://shader/lightdark.gdshader<>uid://cukiu12374ql7::::res://shader/snow.gdshader
+::res://scenes/player/::1749161029
+luigi.tscn::PackedScene::6402478721624829730::1749161029::0::1::::<><><>0<>0<><>::uid://cwcgsdxxyjvab::::res://scripts/player/playable_character.gd<>uid://h2bi8xstmqu4::::res://shader/hurt.gdshader<>uid://d33yi42p2kved::::res://assets/mob/luigi.png<>uid://bqhmthb2mdu3c::::res://shader/lightdark.gdshader<>uid://cukiu12374ql7::::res://shader/snow.gdshader<>uid://mn1ow1g8ltn6::::res://sound/soundeffect/smb3_jump.wav<>uid://7j4hs46rvcl1::::res://scenes/screen/pause_menu.tscn<>uid://dkogrutskgk1c::::res://sound/soundeffect/footstep-mario-64.mp3
+mario.tscn::PackedScene::2347711730213384819::1749161029::0::1::::<><><>0<>0<><>::uid://cwcgsdxxyjvab::::res://scripts/player/playable_character.gd<>uid://h2bi8xstmqu4::::res://shader/hurt.gdshader<>uid://bqonl3ss8ihkj::::res://assets/mob/mario.png<>uid://bqhmthb2mdu3c::::res://shader/lightdark.gdshader<>uid://cukiu12374ql7::::res://shader/snow.gdshader<>uid://7j4hs46rvcl1::::res://scenes/screen/pause_menu.tscn<>uid://mn1ow1g8ltn6::::res://sound/soundeffect/smb3_jump.wav<>uid://dkogrutskgk1c::::res://sound/soundeffect/footstep-mario-64.mp3
 player_spawn.tscn::PackedScene/PackedScene::5166793070246467407::1747936793::0::1::::<><><>0<>0<><>::uid://dm6yg7ti45fhg::::res://scripts/player/player_spawn.gd
-::res://scenes/screen/::1748059716
-All_world.tscn::PackedScene::8486285004232132930::1748059716::0::1::::<><><>0<>0<><>::uid://dh2w0um7k7t5u::::res://scripts/global_helper/all_world.gd<>uid://d1wmclyqmtk6r::::res://assets/theme/PixelOperator8.ttf<>uid://budxlu6km21gs::::res://assets/symbol/text coin.jpg<>uid://bgapeuhxjvtcr::::res://assets/symbol/test_clock.jpg<>uid://76eabwe6dgy::::res://assets/symbol/score_test.png<>uid://5ebxj5e0f5ot::::res://shader/crt_screen.gdshader
-highscore_scene.tscn::PackedScene::8574516368509929115::1748059715::0::1::::<><><>0<>0<><>::uid://dwa6p1oymk4qf::::res://assets/theme/default_theme.tres<>uid://0mpskit32svm::::res://assets/theme/PixelOperator8-Bold.ttf<>uid://2eixsyobevpp::::res://scripts/scene/highscore_scene.gd
+::res://scenes/screen/::1749161029
+All_world.tscn::PackedScene::8486285004232132930::1749161029::0::1::::<><><>0<>0<><>::uid://dh2w0um7k7t5u::::res://scripts/global_helper/all_world.gd<>uid://d1wmclyqmtk6r::::res://assets/theme/PixelOperator8.ttf<>uid://budxlu6km21gs::::res://assets/symbol/text coin.jpg<>uid://bgapeuhxjvtcr::::res://assets/symbol/test_clock.jpg<>uid://76eabwe6dgy::::res://assets/symbol/score_test.png<>uid://5ebxj5e0f5ot::::res://shader/crt_screen.gdshader<>uid://bi51p5l12w6od::::res://sound/soundeffect/smb3_lost_suit.wav<>uid://cmgkhgcgic8gf::::res://sound/soundeffect/mario-ouch-101soundboards.mp3<>uid://crdb4y4v0nasf::::res://sound/soundeffect/luigi-ow-101soundboards.mp3
+highscore_scene.tscn::PackedScene/PackedScene::8574516368509929115::1748234616::0::1::::<><><>0<>0<><>::uid://dwa6p1oymk4qf::::res://assets/theme/default_theme.tres<>uid://0mpskit32svm::::res://assets/theme/PixelOperator8-Bold.ttf<>uid://2eixsyobevpp::::res://scripts/scene/highscore_scene.gd
+pause_menu.tscn::PackedScene/PackedScene::2266396681202810608::1749153315::0::1::::<><><>0<>0<><>::uid://dwa6p1oymk4qf::::res://assets/theme/default_theme.tres<>uid://bhvg8bxgv40w0::::res://scripts/scene/pause_menu.gd
 ::res://scripts/::1747945425
-::res://scripts/enemy/::1748059016
+::res://scripts/enemy/::1749158724
 enemy_spawner.cs::CSharpScript/CSharpScript::2636416346041138534::1748059016::0::1::::<>Node2D<><>0<>0<><>::
-goomba.gd::GDScript/GDScript::5696838175621908566::1748057205::0::1::::<>CharacterBody2D<><>0<>0<><>::
-koopa_trooper.gd::GDScript/GDScript::3382881986298290724::1748057204::0::1::::<>CharacterBody2D<><>0<>0<><>::
-::res://scripts/global_helper/::1746762319
-all_world.gd::GDScript/GDScript::7707703645066861948::1746762319::0::1::::<>Node<><>0<>0<><>::
+goomba.gd::GDScript/GDScript::5696838175621908566::1748404989::0::1::::<>CharacterBody2D<><>0<>0<><>::
+koopa_trooper.gd::GDScript::3382881986298290724::1749158724::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://scripts/global_helper/::1749160759
+all_world.gd::GDScript::7707703645066861948::1749160759::0::1::::<>Node<><>0<>0<><>::
 global_player_manager.gd::GDScript/GDScript::6726738749862545235::1746686230::0::1::::<>Node<><>0<>0<><>::
-::res://scripts/object/::1747941292
-coin.gd::GDScript/GDScript::5699915481939760545::1746685512::0::1::::<>Area2D<><>0<>0<><>::
-flag.gd::GDScript/GDScript::719065937652470879::1746684315::0::1::::<>Area2D<><>0<>0<><>::
+::res://scripts/object/::1749155905
+coin.gd::GDScript/GDScript::5699915481939760545::1748233499::0::1::::<>Area2D<><>0<>0<><>::
+flag.gd::GDScript/GDScript::719065937652470879::1749155905::0::1::::<>Area2D<><>0<>0<><>::
 moving_platform.gd::GDScript/GDScript::1960757314303715828::1747941291::0::1::::Moving_Plat<>Path2D<><>0<>0<><>::
 spike.gd::GDScript/GDScript::5321115329362613801::1746769077::0::1::::<>Area2D<><>0<>0<><>::
-::res://scripts/player/::1747944073
-playable_character.gd::GDScript/GDScript::6321521323355937853::1747944073::0::1::::MyPlayer<>CharacterBody2D<><>0<>0<><>::
+::res://scripts/player/::1749154520
+playable_character.gd::GDScript/GDScript::6321521323355937853::1749154520::0::1::::MyPlayer<>CharacterBody2D<><>0<>0<><>::
 player_spawn.gd::GDScript/GDScript::8066993518203280136::1747201554::0::1::::<>Node2D<><>0<>0<><>::
-::res://scripts/scene/::1746808917
+::res://scripts/scene/::1749146902
 highscore_scene.gd::GDScript/GDScript::1903884081578280657::1746686218::0::1::::<>Control<><>0<>0<><>::
 main_menu.gd::GDScript/GDScript::3401978351710608098::1746686161::0::1::::<>Control<><>0<>0<><>::
-::res://scripts/state/::1748058408
+menu_facade.gd::GDScript/GDScript::2241590897228966953::1749146902::0::1::::menu_facade<>Node<><>0<>0<><>::
+pause_menu.gd::GDScript/GDScript::2921517843505740193::1749146611::0::1::::pause_menu<>Control<><>0<>0<><>::
+::res://scripts/state/::1749161161
 idle.gd::GDScript/GDScript::3297129105125226211::1748057680::0::1::::idle<>State<><>0<>0<><>::
+idlekoopa.gd::GDScript::2009844276305935146::1749159163::0::1::::idlekoopa<>State<><>0<>0<><>::
+shell.gd::GDScript::2872992053181252555::1749161161::0::1::::shell<>State<><>0<>0<><>::
 state.gd::GDScript/GDScript::4696908296608268993::1748058327::0::1::::State<>Node2D<><>0<>0<><>::
 state_machine.gd::GDScript/GDScript::2429547786140143318::1748058408::0::1::::<>Node<><>0<>0<><>::
+state_machinekoopa.gd::GDScript/GDScript::5736530062870752818::1749152685::0::1::::<>Node<><>0<>0<><>::
 targeting_player.gd::GDScript/GDScript::7449885799410788798::1748057922::0::1::::targeting_player<>State<><>0<>0<><>::
-::res://shader/::1748059731
-crt_screen.gdshader::Shader::2114025129679455263::1748059731::0::1::::<><><>0<>0<><>::
-hurt.gdshader::Shader::547136877814621461::1748059731::0::1::::<><><>0<>0<><>::
-lightdark.gdshader::Shader::3524655730628618114::1748059731::0::1::::<><><>0<>0<><>::
-snow.gdshader::Shader::6197784878140613502::1748059731::0::1::::<><><>0<>0<><>::
+targeting_playerkoopa.gd::GDScript::1171163244942879090::1749159366::0::1::::targeting_playerkoopa<>State<><>0<>0<><>::
+::res://shader/::1749163741
+crt_screen.gdshader::Shader::2114025129679455263::1749163741::0::1::::<><><>0<>0<><>::
+hurt.gdshader::Shader::547136877814621461::1749163741::0::1::::<><><>0<>0<><>::
+lightdark.gdshader::Shader::3524655730628618114::1749163741::0::1::::<><><>0<>0<><>::
+snow.gdshader::Shader::6197784878140613502::1749163741::0::1::::<><><>0<>0<><>::
+::res://sound/::1748231929
+::res://sound/music/::1748238363
+1 - Running About.mp3::AudioStreamMP3/AudioStreamMP3::9116725340475283423::1748231090::1748232213::1::::<><><>0<>0<>bcbbba668e653e633711a35806ba5d82<>res://.godot/imported/1 - Running About.mp3-a1386ed990807012c0b3f21eaac370d3.mp3str::
+3 - Underground.mp3::AudioStreamMP3/AudioStreamMP3::548847279654442788::1748231090::1748232224::1::::<><><>0<>0<>57c6b161df9d3f0a0ee2b93ca1f2c8b4<>res://.godot/imported/3 - Underground.mp3-e72b014df85b20b409ca0bf91bc7d66e.mp3str::
+5 - Swimming Around.mp3::AudioStreamMP3/AudioStreamMP3::5526590936443855746::1748231090::1748232227::1::::<><><>0<>0<>86455330d8f5110052d4fded4c98051c<>res://.godot/imported/5 - Swimming Around.mp3-8a617dc7a74fe7ed5920733c254ef86d.mp3str::
+52ac54_super_mario_bros_stage_clear_sound_effect.mp3::AudioStreamMP3/AudioStreamMP3::1625525931175982972::1748238338::1748238363::1::::<><><>0<>0<>29f717edb1c8afdb082cbd22423d8e2e<>res://.godot/imported/52ac54_super_mario_bros_stage_clear_sound_effect.mp3-70ad79e4aebb5e4a7ad73e6fcf86685d.mp3str::
+::res://sound/soundeffect/::1748403825
+footstep-mario-64.mp3::AudioStreamMP3/AudioStreamMP3::7890447517119181934::1748237977::1748238001::1::::<><><>0<>0<>6f4571e42ac2ea0635b5abf179706bb9<>res://.godot/imported/footstep-mario-64.mp3-ed0a5600fcf6a7ca05bef37d9256314b.mp3str::
+luigi-ow-101soundboards.mp3::AudioStreamMP3/AudioStreamMP3::5972358653858735809::1748402676::1748402892::1::::<><><>0<>0<>e745a9db10391bdc15207955a13fd7a5<>res://.godot/imported/luigi-ow-101soundboards.mp3-eae6fb003f95c5e98d74b6d3b4a2cac7.mp3str::
+mario-ouch-101soundboards.mp3::AudioStreamMP3/AudioStreamMP3::5628113746565078181::1748402754::1748402892::1::::<><><>0<>0<>782cbad3e695c04962f4c850a858cfae<>res://.godot/imported/mario-ouch-101soundboards.mp3-5f33e3668e969a1f0941ad3780f2b7fa.mp3str::
+smb3_coin.wav::AudioStreamWAV/AudioStreamWAV::7355486092496417010::1748234192::1748234221::1::::<><><>0<>0<>c58964a465e6e1825875da84f9a4172d<>res://.godot/imported/smb3_coin.wav-003796a0352a65e2d1645ec9f4a291ad.sample::
+smb3_jump.wav::AudioStreamWAV/AudioStreamWAV::870707873381546701::1748234203::1748234221::1::::<><><>0<>0<>efb394964f04dbd83b13385909080e15<>res://.godot/imported/smb3_jump.wav-f8460836b6aa73c529e6c9838e07a480.sample::
+smb3_lost_suit.wav::AudioStreamWAV/AudioStreamWAV::3011469788051310907::1748230364::1748231970::1::::<><><>0<>0<>3e8d71b043f961d59b95686ee731ee58<>res://.godot/imported/smb3_lost_suit.wav-172a3be1770f444905bb74454b80de38.sample::

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://h24o1j6dv1ca"
+path="res://.godot/imported/3 - Underground.mp3-e72b014df85b20b409ca0bf91bc7d66e.mp3str"
+
+[deps]
+
+source_file="res://sound/music/3 - Underground.mp3"
+dest_files=["res://.godot/imported/3 - Underground.mp3-e72b014df85b20b409ca0bf91bc7d66e.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

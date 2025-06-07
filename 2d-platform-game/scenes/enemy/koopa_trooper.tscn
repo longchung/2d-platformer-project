@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dewr0m0wscmqs"]
+[gd_scene load_steps=10 format=3 uid="uid://dewr0m0wscmqs"]
 
 [ext_resource type="Texture2D" uid="uid://55u0ma2sdp6n" path="res://assets/mob/koopa.png" id="1_atyah"]
 [ext_resource type="Script" uid="uid://bogxtpkurvg7u" path="res://scripts/enemy/koopa_trooper.gd" id="1_jsej0"]
-[ext_resource type="Script" uid="uid://bau5kdoj3d7oc" path="res://scripts/state/state_machine.gd" id="2_jsej0"]
-[ext_resource type="Script" uid="uid://bm8fh8iqk7q1p" path="res://scripts/state/idle.gd" id="3_q18fa"]
-[ext_resource type="Script" uid="uid://dee1sbpviqseo" path="res://scripts/state/targeting_player.gd" id="4_c83g0"]
+[ext_resource type="Script" uid="uid://cny22uxs24ew5" path="res://scripts/state/state_machinekoopa.gd" id="3_q18fa"]
+[ext_resource type="Script" uid="uid://3vt3u42ps32e" path="res://scripts/state/idlekoopa.gd" id="4_c83g0"]
+[ext_resource type="Script" uid="uid://qxk5f8xengek" path="res://scripts/state/targeting_playerkoopa.gd" id="5_h5am2"]
+[ext_resource type="Script" uid="uid://bg6x023e2blv4" path="res://scripts/state/shell.gd" id="6_c83g0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_atyah"]
 size = Vector2(16, 24)
@@ -24,26 +25,32 @@ scale = Vector2(0.027027, 0.0263422)
 texture = ExtResource("1_atyah")
 offset = Vector2(-36, 136)
 
+[node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("init_state")]
+script = ExtResource("3_q18fa")
+init_state = NodePath("idlekoopa")
+
+[node name="idlekoopa" type="Node2D" parent="state_machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("4_c83g0")
+enemy = NodePath("../..")
+metadata/_custom_type_script = "uid://3vt3u42ps32e"
+
+[node name="targeting_playerkoopa" type="Node2D" parent="state_machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("5_h5am2")
+enemy = NodePath("../..")
+metadata/_custom_type_script = "uid://qxk5f8xengek"
+
+[node name="shell" type="Node2D" parent="state_machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("6_c83g0")
+enemy = NodePath("../..")
+metadata/_custom_type_script = "uid://bg6x023e2blv4"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_atyah")
 debug_color = Color(0.123139, 0.627315, 0.457794, 0.42)
 
-[node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("init_state")]
-script = ExtResource("2_jsej0")
-init_state = NodePath("idle")
-
-[node name="idle" type="Node2D" parent="state_machine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("3_q18fa")
-enemy = NodePath("../..")
-metadata/_custom_type_script = "uid://bm8fh8iqk7q1p"
-
-[node name="targeting_player" type="Node2D" parent="state_machine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("4_c83g0")
-enemy = NodePath("../..")
-metadata/_custom_type_script = "uid://dee1sbpviqseo"
-
 [node name="damage" type="Area2D" parent="."]
+collision_layer = 5
 
 [node name="damage_player" type="CollisionShape2D" parent="damage"]
 position = Vector2(0, -8.25)
@@ -58,3 +65,6 @@ debug_color = Color(0.819303, 0.366339, 0.453437, 0.42)
 
 [connection signal="body_entered" from="damage" to="." method="damage_player"]
 [connection signal="body_entered" from="kill" to="." method="_on_kill_body_entered"]
+[connection signal="body_entered" from="kill" to="state_machine/idlekoopa" method="_on_kill_body_entered"]
+[connection signal="body_entered" from="kill" to="state_machine/targeting_playerkoopa" method="_on_kill_body_entered"]
+[connection signal="body_entered" from="kill" to="state_machine/shell" method="_on_kill_body_entered"]

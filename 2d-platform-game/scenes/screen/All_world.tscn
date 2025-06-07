@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ds524yr5y8f2q"]
+[gd_scene load_steps=12 format=3 uid="uid://ds524yr5y8f2q"]
 
 [ext_resource type="Script" uid="uid://dh2w0um7k7t5u" path="res://scripts/global_helper/all_world.gd" id="1_qgs48"]
 [ext_resource type="FontFile" uid="uid://d1wmclyqmtk6r" path="res://assets/theme/PixelOperator8.ttf" id="2_fbmv7"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://bgapeuhxjvtcr" path="res://assets/symbol/test_clock.jpg" id="4_qu4r7"]
 [ext_resource type="Texture2D" uid="uid://76eabwe6dgy" path="res://assets/symbol/score_test.png" id="5_3lp5k"]
 [ext_resource type="Shader" uid="uid://5ebxj5e0f5ot" path="res://shader/crt_screen.gdshader" id="6_fbmv7"]
+[ext_resource type="AudioStream" uid="uid://bi51p5l12w6od" path="res://sound/soundeffect/smb3_lost_suit.wav" id="7_6x0i2"]
+[ext_resource type="AudioStream" uid="uid://cmgkhgcgic8gf" path="res://sound/soundeffect/mario-ouch-101soundboards.mp3" id="8_3lp5k"]
+[ext_resource type="AudioStream" uid="uid://crdb4y4v0nasf" path="res://sound/soundeffect/luigi-ow-101soundboards.mp3" id="9_k6pyb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fbmv7"]
 shader = ExtResource("6_fbmv7")
@@ -65,3 +68,15 @@ texture = ExtResource("4_qu4r7")
 position = Vector2(48, 120)
 scale = Vector2(0.0115117, 0.0266141)
 texture = ExtResource("5_3lp5k")
+
+[node name="enemydie" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_6x0i2")
+bus = &"enemy"
+
+[node name="mario_ouch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_3lp5k")
+bus = &"player"
+
+[node name="luigi_ouch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_k6pyb")
+bus = &"player"

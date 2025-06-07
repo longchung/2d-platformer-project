@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://da2ow8qhjodo"]
+[gd_scene load_steps=14 format=4 uid="uid://da2ow8qhjodo"]
 
 [ext_resource type="Texture2D" uid="uid://bqh4mxsdc3iow" path="res://assets/tilemap/NES - Super Mario Bros - Tileset.png" id="1_up6pq"]
 [ext_resource type="PackedScene" uid="uid://cfu3ld88h44e2" path="res://scenes/player/player_spawn.tscn" id="2_up6pq"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dw7ya7sdx4evj" path="res://scenes/object/spike.tscn" id="5_bw4nu"]
 [ext_resource type="PackedScene" uid="uid://bfvn4o73pkffl" path="res://scenes/object/moving_platform.tscn" id="6_dp3f7"]
 [ext_resource type="Script" uid="uid://bdtdnlgrhh2qs" path="res://scripts/enemy/enemy_spawner.cs" id="7_s84bj"]
+[ext_resource type="AudioStream" uid="uid://d25hetl7x4pal" path="res://sound/music/1 - Running About.mp3" id="8_s84bj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xoif0"]
 texture = ExtResource("1_up6pq")
@@ -2188,7 +2189,8 @@ position = Vector2(3712, -161)
 curve = SubResource("Curve2D_emqbo")
 
 [node name="flag" parent="." instance=ExtResource("4_j2aoq")]
-position = Vector2(5848, -529)
+process_mode = 3
+position = Vector2(5820, -499)
 
 [node name="enemy" type="Node" parent="."]
 
@@ -2199,13 +2201,19 @@ position = Vector2(0, -46)
 script = ExtResource("7_s84bj")
 
 [node name="Marker1" type="Marker2D" parent="enemy/enemy_spawner"]
-position = Vector2(401, -35)
+position = Vector2(1153, -37)
 
 [node name="Marker2" type="Marker2D" parent="enemy/enemy_spawner"]
-position = Vector2(1585, -37)
+position = Vector2(1639, -23)
 
 [node name="Marker3" type="Marker2D" parent="enemy/enemy_spawner"]
 position = Vector2(3941, 6)
 
 [node name="Marker4" type="Marker2D" parent="enemy/enemy_spawner"]
 position = Vector2(5776, -26)
+
+[node name="world1-1_bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_s84bj")
+volume_db = -1.675
+autoplay = true
+bus = &"bgm"
